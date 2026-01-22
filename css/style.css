@@ -73,7 +73,7 @@ main {
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 3rem 2rem;
 }
 
 .content-card {
@@ -339,6 +339,10 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    main {
+        padding: 2rem 1.5rem;
+    }
+
     .hero h1 {
         font-size: 2rem;
     }
