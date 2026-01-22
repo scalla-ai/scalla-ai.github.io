@@ -52,6 +52,7 @@ header {
 
 .logo span {
     color: var(--primary-color);
+    font-family: 'SF Mono', 'Fira Code', monospace;
 }
 
 .logo .divider {
@@ -65,6 +66,11 @@ header {
     color: var(--text-sub);
     text-transform: uppercase;
     letter-spacing: 1px;
+}
+
+/* Brand Font */
+.brand-font {
+    font-family: 'SF Mono', 'Fira Code', monospace;
 }
 
 /* Main Content */
@@ -149,7 +155,7 @@ hr {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 6rem 0;
+    padding: 4rem 0;
 }
 
 .hero.hero-left {
@@ -172,7 +178,7 @@ hr {
     font-size: 1.15rem;
     line-height: 1.7;
     max-width: 700px;
-    margin: 0 auto 2rem;
+    margin: 0 auto 1.5rem;
     color: var(--text-sub);
 }
 
