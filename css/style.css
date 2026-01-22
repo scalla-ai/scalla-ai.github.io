@@ -370,34 +370,36 @@ footer {
     display: flex;
     align-items: center;
     gap: 4rem;
-    margin-bottom: 6rem;
+    margin-bottom: 8rem; /* Increased spacing */
 }
 
-.feature-row:nth-child(even) {
-    flex-direction: row-reverse;
-}
+/* Removed zigzag rule */
 
 .feature-text {
     flex: 1;
+    min-width: 300px;
 }
 
 .feature-text h3 {
-    font-size: 1.75rem;
-    margin-bottom: 1rem;
+    font-size: 2.5rem; /* Increased from 1.75rem */
+    font-weight: 800;
+    margin-bottom: 1.5rem;
     color: var(--text-main);
+    letter-spacing: -0.02em;
 }
 
 .feature-text p {
-    font-size: 1.1rem;
+    font-size: 1.35rem; /* Increased from 1.1rem */
     color: var(--text-sub);
-    line-height: 1.7;
+    line-height: 1.6;
+    font-weight: 300;
 }
 
 .feature-image {
-    flex: 1;
-    border-radius: 16px;
+    flex: 1.2; /* Give image slightly more space */
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
     border: 1px solid var(--border-color);
 }
 
@@ -410,15 +412,20 @@ footer {
 /* Responsive */
 @media (max-width: 768px) {
     .feature-row {
-        flex-direction: column !important; /* Force column on mobile */
+        flex-direction: column; /* Text top, Image bottom */
         gap: 2rem;
-        margin-bottom: 4rem;
-        text-align: center;
+        margin-bottom: 5rem;
+        text-align: left; /* Keep left align on mobile too, or center if preferred */
     }
 
     .feature-text h3 {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
+    
+    .feature-text p {
+        font-size: 1.15rem;
+    }
+}
         padding: 2rem 1.5rem;
     }
 
