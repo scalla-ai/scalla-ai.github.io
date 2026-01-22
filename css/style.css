@@ -365,7 +365,75 @@ footer {
     border: 1px solid var(--border-color);
 }
 
+/* App Showcase */
+.showcase-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.showcase-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.showcase-gallery {
+    flex: 2;
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1.5rem; /* Scrollbar space */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+.showcase-item {
+    flex: 0 0 auto;
+    width: 280px; /* Mobile width */
+    scroll-snap-align: start;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.showcase-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.showcase-caption {
+    padding: 1rem;
+    background: var(--surface-color);
+}
+
+.showcase-caption h4 {
+    margin: 0 0 0.5rem 0;
+    color: var(--text-main);
+    font-size: 1rem;
+}
+
+.showcase-caption p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--text-sub);
+}
+
 /* Responsive */
+@media (min-width: 1024px) {
+    .showcase-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    
+    .showcase-text {
+        position: sticky;
+        top: 2rem;
+    }
+}
+
 @media (max-width: 768px) {
     main {
         padding: 2rem 1.5rem;
