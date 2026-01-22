@@ -365,77 +365,60 @@ footer {
     border: 1px solid var(--border-color);
 }
 
-/* App Showcase */
-.showcase-container {
+/* App Showcase (Vertical) */
+.feature-row {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 4rem;
+    align-items: center;
+    gap: 4rem;
+    margin-bottom: 6rem;
 }
 
-.showcase-text {
+.feature-row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.feature-text {
     flex: 1;
-    min-width: 300px;
 }
 
-.showcase-gallery {
-    flex: 2;
-    display: flex;
-    gap: 1.5rem;
-    overflow-x: auto;
-    padding-bottom: 1.5rem; /* Scrollbar space */
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
+.feature-text h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
 }
 
-.showcase-item {
-    flex: 0 0 auto;
-    width: 280px; /* Mobile width */
-    scroll-snap-align: start;
+.feature-text p {
+    font-size: 1.1rem;
+    color: var(--text-sub);
+    line-height: 1.7;
+}
+
+.feature-image {
+    flex: 1;
     border-radius: 16px;
     overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
     border: 1px solid var(--border-color);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
-.showcase-item img {
+.feature-image img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-.showcase-caption {
-    padding: 1rem;
-    background: var(--surface-color);
-}
-
-.showcase-caption h4 {
-    margin: 0 0 0.5rem 0;
-    color: var(--text-main);
-    font-size: 1rem;
-}
-
-.showcase-caption p {
-    margin: 0;
-    font-size: 0.85rem;
-    color: var(--text-sub);
-}
-
 /* Responsive */
-@media (min-width: 1024px) {
-    .showcase-container {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-    
-    .showcase-text {
-        position: sticky;
-        top: 2rem;
-    }
-}
-
 @media (max-width: 768px) {
-    main {
+    .feature-row {
+        flex-direction: column !important; /* Force column on mobile */
+        gap: 2rem;
+        margin-bottom: 4rem;
+        text-align: center;
+    }
+
+    .feature-text h3 {
+        font-size: 1.5rem;
+    }
         padding: 2rem 1.5rem;
     }
 
