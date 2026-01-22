@@ -202,6 +202,28 @@ hr {
     text-decoration: none;
 }
 
+.btn-outline {
+    display: inline-block;
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 0.875rem 1.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-outline:hover {
+    background-color: var(--surface-variant);
+    border-color: var(--text-tertiary);
+    text-decoration: none;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
 /* Feature Grid */
 .feature-grid {
     display: grid;
